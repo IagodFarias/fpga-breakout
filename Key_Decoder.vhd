@@ -6,8 +6,8 @@ entity Key_Decoder is
         clock     : in std_logic;
         makecode  : in std_logic_vector(7 downto 0);
         breakcode : in std_logic_vector(7 downto 0);
-        key_left  : out std_logic; -- Vai para o Game Core
-        key_right : out std_logic  -- Vai para o Game Core
+        key_left  : out std_logic; 
+        key_right : out std_logic  
     );
 end entity;
 
@@ -17,16 +17,22 @@ begin
     process(clock)
     begin
         if rising_edge(clock) then
-            -- Lógica para Esquerda (Tecla 'A' = 1C)
-            if makecode = x"1C" then s_left <= '1'; end if;
-            if breakcode = x"1C" then s_left <= '0'; end if;
+            -- Lógica Esquerda (Prioridade para parar o movimento)
+            if breakcode = x"1C" then 
+                s_left <= '0';
+            elsif makecode = x"1C" then 
+                s_left <= '1'; 
+            end if;
 
-            -- Lógica para Direita (Tecla 'D' = 23)
-            if makecode = x"23" then s_right <= '1'; end if;
-            if breakcode = x"23" then s_right <= '0'; end if;
+            -- Lógica Direita (Prioridade para parar o movimento)
+            if breakcode = x"23" then 
+                s_right <= '0';
+            elsif makecode = x"23" then 
+                s_right <= '1'; 
+            end if;
         end if;
     end process;
 
-    key_left <= s_left;
+    key_left  <= s_left;
     key_right <= s_right;
 end architecture;

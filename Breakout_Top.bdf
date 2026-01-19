@@ -50,6 +50,7 @@ applicable agreement for further details.
 		(line (pt 109 12)(pt 113 8))
 	)
 	(text "VCC" (rect 128 7 148 17)(font "Arial" (font_size 6)))
+	(annotation_block (location)(rect -120 176 -64 192))
 )
 (pin
 	(input)
@@ -82,6 +83,7 @@ applicable agreement for further details.
 		(line (pt 109 12)(pt 113 8))
 	)
 	(text "VCC" (rect 128 7 148 17)(font "Arial" (font_size 6)))
+	(annotation_block (location)(rect 56 304 112 320))
 )
 (pin
 	(output)
@@ -98,10 +100,11 @@ applicable agreement for further details.
 		(line (pt 82 8)(pt 78 12))
 		(line (pt 78 12)(pt 82 8))
 	)
+	(annotation_block (location)(rect 1152 -64 1208 -48))
 )
 (pin
 	(output)
-	(rect 984 -32 1160 -16)
+	(rect 984 -64 1160 -48)
 	(text "OUTPUT" (rect 1 0 39 10)(font "Arial" (font_size 6)))
 	(text "VGA_VS" (rect 90 0 132 12)(font "Arial" ))
 	(pt 0 8)
@@ -114,6 +117,7 @@ applicable agreement for further details.
 		(line (pt 82 8)(pt 78 12))
 		(line (pt 78 12)(pt 82 8))
 	)
+	(annotation_block (location)(rect 1160 -48 1216 -32))
 )
 (pin
 	(output)
@@ -130,6 +134,7 @@ applicable agreement for further details.
 		(line (pt 82 8)(pt 78 12))
 		(line (pt 78 12)(pt 82 8))
 	)
+	(annotation_block (location)(rect 1128 112 1184 128))
 )
 (pin
 	(output)
@@ -146,6 +151,7 @@ applicable agreement for further details.
 		(line (pt 82 8)(pt 78 12))
 		(line (pt 78 12)(pt 82 8))
 	)
+	(annotation_block (location)(rect 1160 136 1216 152))
 )
 (pin
 	(output)
@@ -162,6 +168,7 @@ applicable agreement for further details.
 		(line (pt 82 8)(pt 78 12))
 		(line (pt 78 12)(pt 82 8))
 	)
+	(annotation_block (location)(rect 1072 144 1128 160))
 )
 (pin
 	(output)
@@ -699,19 +706,9 @@ applicable agreement for further details.
 	(bus)
 )
 (connector
-	(text "vga_hs" (rect 896 -88 932 -76)(font "Arial" ))
-	(pt 896 -72)
-	(pt 920 -72)
-)
-(connector
 	(text "rst" (rect 666 104 678 116)(font "Arial" ))
 	(pt 680 120)
 	(pt 656 120)
-)
-(connector
-	(text "vga_vs" (rect 896 -72 933 -60)(font "Arial" ))
-	(pt 896 -56)
-	(pt 912 -56)
 )
 (connector
 	(text "bk[7..0]" (rect 360 192 397 204)(font "Arial" ))
@@ -772,16 +769,6 @@ applicable agreement for further details.
 	(bus)
 )
 (connector
-	(text "vga_hs" (rect 944 -104 980 -92)(font "Arial" ))
-	(pt 976 -72)
-	(pt 952 -72)
-)
-(connector
-	(text "vga_vs" (rect 960 -40 997 -28)(font "Arial" ))
-	(pt 960 -24)
-	(pt 984 -24)
-)
-(connector
 	(text "clk_50" (rect 640 312 671 324)(font "Arial" ))
 	(pt 656 328)
 	(pt 696 328)
@@ -796,4 +783,14 @@ applicable agreement for further details.
 	(pt 664 360)
 	(pt 696 360)
 	(bus)
+)
+(connector
+	(text "vga_hs" (rect 896 -88 932 -76)(font "Arial" ))
+	(pt 896 -72)
+	(pt 976 -72)
+)
+(connector
+	(text "vga_vs" (rect 896 -72 933 -60)(font "Arial" ))
+	(pt 896 -56)
+	(pt 984 -56)
 )

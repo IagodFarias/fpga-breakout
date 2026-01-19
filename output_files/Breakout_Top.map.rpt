@@ -1,5 +1,5 @@
 Analysis & Synthesis report for Breakout_Top
-Mon Jan 19 04:21:25 2026
+Mon Jan 19 04:51:29 2026
 Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
 
 
@@ -50,13 +50,13 @@ applicable agreement for further details.
 +--------------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                         ;
 +------------------------------------+-------------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Mon Jan 19 04:21:25 2026           ;
+; Analysis & Synthesis Status        ; Successful - Mon Jan 19 04:51:29 2026           ;
 ; Quartus II 64-Bit Version          ; 13.0.1 Build 232 06/12/2013 SP 1 SJ Web Edition ;
 ; Revision Name                      ; Breakout_Top                                    ;
 ; Top-level Entity Name              ; Breakout_Top                                    ;
 ; Family                             ; Cyclone II                                      ;
-; Total logic elements               ; 2,221                                           ;
-;     Total combinational functions  ; 2,194                                           ;
+; Total logic elements               ; 2,223                                           ;
+;     Total combinational functions  ; 2,204                                           ;
 ;     Dedicated logic registers      ; 262                                             ;
 ; Total registers                    ; 262                                             ;
 ; Total pins                         ; 23                                              ;
@@ -197,16 +197,16 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +---------------------------------------------+-------+
 ; Resource                                    ; Usage ;
 +---------------------------------------------+-------+
-; Estimated Total logic elements              ; 2,221 ;
+; Estimated Total logic elements              ; 2,223 ;
 ;                                             ;       ;
-; Total combinational functions               ; 2194  ;
+; Total combinational functions               ; 2204  ;
 ; Logic element usage by number of LUT inputs ;       ;
-;     -- 4 input functions                    ; 636   ;
-;     -- 3 input functions                    ; 732   ;
-;     -- <=2 input functions                  ; 826   ;
+;     -- 4 input functions                    ; 635   ;
+;     -- 3 input functions                    ; 735   ;
+;     -- <=2 input functions                  ; 834   ;
 ;                                             ;       ;
 ; Logic elements by mode                      ;       ;
-;     -- normal mode                          ; 1291  ;
+;     -- normal mode                          ; 1301  ;
 ;     -- arithmetic mode                      ; 903   ;
 ;                                             ;       ;
 ; Total registers                             ; 262   ;
@@ -217,7 +217,7 @@ Parallel compilation was disabled, but you have multiple processors available. E
 ; Embedded Multiplier 9-bit elements          ; 0     ;
 ; Maximum fan-out node                        ; RESET ;
 ; Maximum fan-out                             ; 215   ;
-; Total fan-out                               ; 7220  ;
+; Total fan-out                               ; 7241  ;
 ; Average fan-out                             ; 2.91  ;
 +---------------------------------------------+-------+
 
@@ -227,7 +227,7 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+----------------------------------------------------------------------------------------------------------------------------+--------------+
 ; Compilation Hierarchy Node               ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                                                        ; Library Name ;
 +------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+----------------------------------------------------------------------------------------------------------------------------+--------------+
-; |Breakout_Top                            ; 2194 (1)          ; 262 (0)      ; 0           ; 0            ; 0       ; 0         ; 23   ; 0            ; |Breakout_Top                                                                                                              ; work         ;
+; |Breakout_Top                            ; 2204 (1)          ; 262 (0)      ; 0           ; 0            ; 0       ; 0         ; 23   ; 0            ; |Breakout_Top                                                                                                              ; work         ;
 ;    |Game_Core:inst4|                     ; 2043 (814)        ; 184 (184)    ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Breakout_Top|Game_Core:inst4                                                                                              ; work         ;
 ;       |lpm_divide:Div0|                  ; 456 (0)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Breakout_Top|Game_Core:inst4|lpm_divide:Div0                                                                              ; work         ;
 ;          |lpm_divide_8so:auto_generated| ; 456 (0)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Breakout_Top|Game_Core:inst4|lpm_divide:Div0|lpm_divide_8so:auto_generated                                                ; work         ;
@@ -247,7 +247,7 @@ Parallel compilation was disabled, but you have multiple processors available. E
 ;    |OLED_SPI_Controller:inst3|           ; 42 (42)           ; 23 (23)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Breakout_Top|OLED_SPI_Controller:inst3                                                                                    ; work         ;
 ;    |VGA_Sync:inst1|                      ; 68 (68)           ; 23 (23)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Breakout_Top|VGA_Sync:inst1                                                                                               ; work         ;
 ;    |divisor:inst0|                       ; 1 (1)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Breakout_Top|divisor:inst0                                                                                                ; work         ;
-;    |teclado:inst2|                       ; 28 (28)           ; 29 (29)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Breakout_Top|teclado:inst2                                                                                                ; work         ;
+;    |teclado:inst2|                       ; 38 (38)           ; 29 (29)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Breakout_Top|teclado:inst2                                                                                                ; work         ;
 +------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+----------------------------------------------------------------------------------------------------------------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
@@ -420,12 +420,14 @@ Encoding Type:  One-Hot
 +--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------------------------------+
 ; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                           ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------------------------------+
-; 3:1                ; 26 bits   ; 52 LEs        ; 0 LEs                ; 52 LEs                 ; Yes        ; |Breakout_Top|Game_Core:inst4|paddle_x[5]            ;
+; 3:1                ; 26 bits   ; 52 LEs        ; 0 LEs                ; 52 LEs                 ; Yes        ; |Breakout_Top|Game_Core:inst4|paddle_x[27]           ;
 ; 4:1                ; 2 bits    ; 4 LEs         ; 2 LEs                ; 2 LEs                  ; Yes        ; |Breakout_Top|Game_Core:inst4|ball_dy[0]             ;
 ; 5:1                ; 2 bits    ; 6 LEs         ; 4 LEs                ; 2 LEs                  ; Yes        ; |Breakout_Top|teclado:inst2|contador[1]              ;
-; 3:1                ; 3 bits    ; 6 LEs         ; 0 LEs                ; 6 LEs                  ; Yes        ; |Breakout_Top|Game_Core:inst4|paddle_x[3]            ;
+; 8:1                ; 8 bits    ; 40 LEs        ; 8 LEs                ; 32 LEs                 ; Yes        ; |Breakout_Top|teclado:inst2|breakcode[4]             ;
+; 8:1                ; 8 bits    ; 40 LEs        ; 8 LEs                ; 32 LEs                 ; Yes        ; |Breakout_Top|teclado:inst2|makecode[7]              ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 0 LEs                ; 6 LEs                  ; Yes        ; |Breakout_Top|Game_Core:inst4|paddle_x[8]            ;
 ; 5:1                ; 3 bits    ; 9 LEs         ; 3 LEs                ; 6 LEs                  ; Yes        ; |Breakout_Top|OLED_SPI_Controller:inst3|bit_index[2] ;
-; 4:1                ; 30 bits   ; 60 LEs        ; 30 LEs               ; 30 LEs                 ; Yes        ; |Breakout_Top|Game_Core:inst4|ball_dy[13]            ;
+; 4:1                ; 30 bits   ; 60 LEs        ; 30 LEs               ; 30 LEs                 ; Yes        ; |Breakout_Top|Game_Core:inst4|ball_dy[4]             ;
 ; 7:1                ; 2 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; No         ; |Breakout_Top|Game_Core:inst4|vga_R                  ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------------------------------+
 
@@ -519,7 +521,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------------+--------------+
 ; Partition Name ; Elapsed Time ;
 +----------------+--------------+
-; Top            ; 00:00:04     ;
+; Top            ; 00:00:03     ;
 +----------------+--------------+
 
 
@@ -529,7 +531,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit Analysis & Synthesis
     Info: Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
-    Info: Processing started: Mon Jan 19 04:21:19 2026
+    Info: Processing started: Mon Jan 19 04:51:24 2026
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off Breakout_Top -c Breakout_Top
 Warning (20028): Parallel compilation is not licensed and has been disabled
 Info (12021): Found 1 design units, including 1 entities, in source file breakout_top.bdf
@@ -564,7 +566,7 @@ Info (10041): Inferred latch for "paddle_x[1]" at Game_core.vhd(59)
 Info (10041): Inferred latch for "paddle_x[2]" at Game_core.vhd(59)
 Info (12128): Elaborating entity "Key_Decoder" for hierarchy "Key_Decoder:inst"
 Info (12128): Elaborating entity "teclado" for hierarchy "teclado:inst2"
-Warning (10036): Verilog HDL or VHDL warning at teclado.vhd(19): object "prefixo_E0" assigned a value but never read
+Warning (10036): Verilog HDL or VHDL warning at teclado.vhd(18): object "prefixo_E0" assigned a value but never read
 Info (278001): Inferred 3 megafunctions from design logic
     Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "Game_Core:inst4|Div1"
     Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "Game_Core:inst4|Mod0"
@@ -622,14 +624,14 @@ Info (17016): Found the following redundant logic cells in design
     Info (17048): Logic cell "Game_Core:inst4|lpm_divide:Div1|lpm_divide_8so:auto_generated|abs_divider_lbg:divider|alt_u_div_m2f:divider|add_sub_25_result_int[1]~12"
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 2306 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 2316 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 4 input pins
     Info (21059): Implemented 19 output pins
-    Info (21061): Implemented 2283 logic cells
+    Info (21061): Implemented 2293 logic cells
 Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 7 warnings
-    Info: Peak virtual memory: 4686 megabytes
-    Info: Processing ended: Mon Jan 19 04:21:26 2026
-    Info: Elapsed time: 00:00:07
-    Info: Total CPU time (on all processors): 00:00:06
+    Info: Peak virtual memory: 4684 megabytes
+    Info: Processing ended: Mon Jan 19 04:51:29 2026
+    Info: Elapsed time: 00:00:05
+    Info: Total CPU time (on all processors): 00:00:05
 
 
