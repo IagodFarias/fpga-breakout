@@ -1,0 +1,6 @@
+
+State Machine - |Breakout_Top|OLED_SPI_Controller:inst3|state
+Name state.WaitState state.SendByte state.Idle 
+state.Idle 0 0 0 
+state.SendByte 0 1 1 
+state.WaitState 1 0 1 

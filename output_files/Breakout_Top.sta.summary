@@ -1,0 +1,77 @@
+------------------------------------------------------------
+TimeQuest Timing Analyzer Summary
+------------------------------------------------------------
+
+Type  : Slow Model Setup 'divisor:inst0|pixel_clock'
+Slack : -90.342
+TNS   : -8211.306
+
+Type  : Slow Model Setup 'PS2_CLK'
+Slack : -2.583
+TNS   : -54.789
+
+Type  : Slow Model Setup 'CLK50'
+Slack : -2.360
+TNS   : -46.948
+
+Type  : Slow Model Hold 'CLK50'
+Slack : -2.690
+TNS   : -2.690
+
+Type  : Slow Model Hold 'PS2_CLK'
+Slack : 0.445
+TNS   : 0.000
+
+Type  : Slow Model Hold 'divisor:inst0|pixel_clock'
+Slack : 0.445
+TNS   : 0.000
+
+Type  : Slow Model Minimum Pulse Width 'PS2_CLK'
+Slack : -1.631
+TNS   : -37.069
+
+Type  : Slow Model Minimum Pulse Width 'CLK50'
+Slack : -1.631
+TNS   : -33.403
+
+Type  : Slow Model Minimum Pulse Width 'divisor:inst0|pixel_clock'
+Slack : -0.611
+TNS   : -252.954
+
+Type  : Fast Model Setup 'divisor:inst0|pixel_clock'
+Slack : -33.161
+TNS   : -2962.711
+
+Type  : Fast Model Setup 'CLK50'
+Slack : -0.456
+TNS   : -5.092
+
+Type  : Fast Model Setup 'PS2_CLK'
+Slack : -0.439
+TNS   : -6.916
+
+Type  : Fast Model Hold 'CLK50'
+Slack : -1.721
+TNS   : -1.721
+
+Type  : Fast Model Hold 'PS2_CLK'
+Slack : 0.215
+TNS   : 0.000
+
+Type  : Fast Model Hold 'divisor:inst0|pixel_clock'
+Slack : 0.215
+TNS   : 0.000
+
+Type  : Fast Model Minimum Pulse Width 'PS2_CLK'
+Slack : -1.380
+TNS   : -30.380
+
+Type  : Fast Model Minimum Pulse Width 'CLK50'
+Slack : -1.380
+TNS   : -27.380
+
+Type  : Fast Model Minimum Pulse Width 'divisor:inst0|pixel_clock'
+Slack : -0.500
+TNS   : -207.000
+
+------------------------------------------------------------
